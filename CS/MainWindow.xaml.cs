@@ -8,7 +8,7 @@ namespace DXGridSample {
         }
         private void RequestTimescaleRulers(object sender, RequestTimescaleRulersEventArgs e) {
             e.TimescaleRulers.Clear();
-            e.TimescaleRulers.Add(new TimescaleRuler(TimescaleUnit.Month, formatProvider: new CustomFormatProvider(ganttView.Zoom)));
+            e.TimescaleRulers.Add(new TimescaleRuler(TimescaleUnit.Month, formatProvider: CustomFormatProvider.GetFormatProvider(ganttView.Zoom)));
         }
     }
 }
